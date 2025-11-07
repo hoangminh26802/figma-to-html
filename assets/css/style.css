@@ -43,7 +43,6 @@ a {
   background: #171100;
 }
 
-/* nút chung */
 .btn:hover {
   cursor: pointer;
   opacity: 0.9;
@@ -64,7 +63,7 @@ a {
 }
 
 .line-clamp.line-2 {
-  --line-clam: 2;
+  --line-clamp: 2;
 }
 
 .break-all {
@@ -411,22 +410,29 @@ a {
   background: var(--primary-color);
 }
 
-/* ==============Feedback=============== */
+/* =================feedback================== */
 .feedback {
   margin-top: 135px;
   padding: 96px 0;
   background: #2e2100;
 }
 
-.feedback-item {
+.feedback-list {
   display: flex;
+  /* trư phần dư */
+  overflow: hidden;
+}
+
+.feedback-item {
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
 }
 
 .feedback-item .avatar {
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  /* ảnh không bị méo */
   object-fit: cover;
 }
 
@@ -446,7 +452,7 @@ a {
   line-height: 1.86;
 }
 
-.feedback-item .info .dots {
+.feedback-item .dots {
   gap: 6px;
   display: flex;
   margin-top: 28px;
@@ -456,14 +462,12 @@ a {
   height: 6px;
   width: 6px;
   border-radius: 50%;
-  background-color: #634700;
-  /* hình bản tay */
+  background: #634700;
   cursor: pointer;
 }
 
 .feedback-item .dot.active {
-  background-color: var(--primary-color);
-  /* bỏ hình bàn tay */
+  background: var(--primary-color);
   cursor: default;
 }
 
@@ -477,4 +481,55 @@ a {
   font-size: 2.6rem;
   font-style: italic;
   line-height: 1.54;
+}
+
+/* =================feedback================== */
+.features {
+  margin-top: 135px;
+  padding: 65px 0;
+}
+
+/* trái */
+.features .body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features .images {
+  display: flex;
+  /* tách ra */
+  gap: 30px;
+}
+
+.features .images img {
+  width: 270px;
+  height: 405px;
+  /* không bị méo ảnh */
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.features .lower {
+  margin-top: 34px;
+}
+
+.features .content {
+  width: 41%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.features .desc {
+  margin-top: 16px;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  line-height: 1.75;
+}
+
+.features .cta-btn {
+  width: 137px;
+  height: 50px;
+  flex-shrink: 0;
+  background: var(--primary-color);
 }
